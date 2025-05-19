@@ -1,13 +1,24 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav style={{ padding: '10px', background: '#eee' }} className="max-w-3xl mx-auto p-4">
-      <Link to="/" style={{ marginRight: '10px' } }>Home</Link>
-      <Link to="/about" style={{ marginRight: '10px' }}>About</Link>
-      <Link to="/blog">Blog</Link>
+   
+    <nav className="bg-white shadow p-4">
+      <div className="flex gap-x-12">
+        <Link
+          to="/"
+          className="flex-1 hover:underline"
+        >
+          Home
+        </Link>
+        <Link to="/about" className="flex-1 hover:underline">
+          About
+        </Link>
+        <Link to="/blog" className="flex-1 hover:underline">
+          Blog
+        </Link>
+      </div>
     </nav>
-  )
+  );
 }
-
-export default Navbar
+export default Navbar;
